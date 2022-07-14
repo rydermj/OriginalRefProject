@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+          <li role="presentation"><a href="../">Jenkins</a></li>
+          <li role="presentation"><a href="../../lastCompletedBuild/cucumber-html-reports/overview-steps.html">Latest results</a></li>
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>cucumberProject</td>
+        <td>1</td>
+      <td>17 May 2022, 11:32</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">Account_Dashboard.i_verify_credit_refund_on_cancelling_trip()</td>
+              <td>1</td>
+              <td class="duration" data-value="24683717218">24.683</td>
+              <td class="duration" data-value="24683717218">24.683</td>
+              <td class="duration" data-value="24683717218">24.683</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Account_Section.User_should_be_able_to_add_a_new_card_details(String,Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="14162149818">14.162</td>
+              <td class="duration" data-value="14162149818">14.162</td>
+              <td class="duration" data-value="14162149818">14.162</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Account_Section.user_should_be_able_to_Add_the_Passenger_successfully(String,Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="10034798353">10.034</td>
+              <td class="duration" data-value="10034798353">10.034</td>
+              <td class="duration" data-value="10034798353">10.034</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Account_Section.user_should_be_able_to_Delete_Added_card_successfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="1013321497">1.013</td>
+              <td class="duration" data-value="1013321497">1.013</td>
+              <td class="duration" data-value="1013321497">1.013</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Account_Section.user_should_be_able_to_modify_only_First_name_Last_name_and_Mobile_number(String,Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="12204889709">12.204</td>
+              <td class="duration" data-value="12204889709">12.204</td>
+              <td class="duration" data-value="12204889709">12.204</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Booking_Flow_One_Way.Book_tickets_with_private_ride_and_Extras()</td>
+              <td>1</td>
+              <td class="duration" data-value="110545066025">1:50.545</td>
+              <td class="duration" data-value="110545066025">1:50.545</td>
+              <td class="duration" data-value="110545066025">1:50.545</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Booking_Flow_One_Way.book_tickets_with_Multi_Passenger_for_Premium_Calss_with_Extras_and_rownumber(String,Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="198240525814">3:18.240</td>
+              <td class="duration" data-value="198240525814">3:18.240</td>
+              <td class="duration" data-value="198240525814">3:18.240</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Booking_Flow_One_Way.book_tickets_with_Multi_Passenger_for_Smart_Calss_with_Extras_and_rownumber(String,Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="131602269046">2:11.602</td>
+              <td class="duration" data-value="131602269046">2:11.602</td>
+              <td class="duration" data-value="131602269046">2:11.602</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Booking_Flow_One_Way.book_tickets_with_Multi_Passengers_for_Smart_Calss_with_Extras_and_rownumber(String,Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="194910532287">3:14.910</td>
+              <td class="duration" data-value="194910532287">3:14.910</td>
+              <td class="duration" data-value="194910532287">3:14.910</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Booking_Flow_One_Way.book_tickets_with_shared_ride_and_Extras_for_One_Way_and_rownumber(String,Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="157260528362">2:37.260</td>
+              <td class="duration" data-value="157260528362">2:37.260</td>
+              <td class="duration" data-value="157260528362">2:37.260</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Booking_Flow_One_Way.booking_should_be_successful()</td>
+              <td>2</td>
+              <td class="duration" data-value="119623887449">1:59.623</td>
+              <td class="duration" data-value="119623887449">2:0.068</td>
+              <td class="duration" data-value="239247774898">3:59.247</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Booking_Flow_One_Way.booking_should_be_successful_with_Multi_Passenger_without_Extras(String,Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="121863356685">2:1.863</td>
+              <td class="duration" data-value="121863356685">2:1.863</td>
+              <td class="duration" data-value="121863356685">2:1.863</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Booking_Flow_One_Way.complete_booking_with_Add_cards_functionality(String,Integer)</td>
+              <td>10</td>
+              <td class="duration" data-value="12025236895">12.025</td>
+              <td class="duration" data-value="12025236895">41.108</td>
+              <td class="duration" data-value="120252368950">2:0.252</td>
+              <td class="failed">20.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Booking_Flow_One_Way.guest_user_adds_tickets_with_Smart_Class_with_Extras_and_rownumber(String,Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="96251708276">1:36.251</td>
+              <td class="duration" data-value="96251708276">1:36.251</td>
+              <td class="duration" data-value="96251708276">1:36.251</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Booking_Flow_One_Way.user_should_allow_to_add_Extras_into_trip_but_Private_Ride_should_not_be_allow_to_Add_into_Trip()</td>
+              <td>2</td>
+              <td class="duration" data-value="132161077780">2:12.161</td>
+              <td class="duration" data-value="132161077780">2:19.261</td>
+              <td class="duration" data-value="264322155560">4:24.322</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Booking_Flow_One_Way.user_should_be_able_to_Remove_items_from_the_Cart_and_rownumber(String,Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="62958273738">1:2.958</td>
+              <td class="duration" data-value="62958273738">1:2.958</td>
+              <td class="duration" data-value="62958273738">1:2.958</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Booking_Flow_Round_Trip.Book_tickets_with_private_ride_and_Extras()</td>
+              <td>1</td>
+              <td class="duration" data-value="98250227552">1:38.250</td>
+              <td class="duration" data-value="98250227552">1:38.250</td>
+              <td class="duration" data-value="98250227552">1:38.250</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Booking_Flow_Round_Trip.book_tickets_with_Multi_Passenger_for_Premium_Calss_with_Extras_and_rownumber(String,Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="45930691357">45.930</td>
+              <td class="duration" data-value="45930691357">45.930</td>
+              <td class="duration" data-value="45930691357">45.930</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Booking_Flow_Round_Trip.book_tickets_with_Multi_Passenger_for_Smart_Calss_with_Extras_and_rownumber(String,Integer)</td>
+              <td>3</td>
+              <td class="duration" data-value="126684537271">2:6.684</td>
+              <td class="duration" data-value="126684537271">3:38.437</td>
+              <td class="duration" data-value="380053611814">6:20.053</td>
+              <td class="failed">33.33%</td>
+            </tr>
+            <tr>
+              <td class="location">Booking_Flow_Round_Trip.book_tickets_with_Multi_Passengers_for_Smart_Calss_with_Extras_and_rownumber(String,Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="117167762026">1:57.167</td>
+              <td class="duration" data-value="117167762026">1:57.167</td>
+              <td class="duration" data-value="117167762026">1:57.167</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Booking_Flow_Round_Trip.book_tickets_with_premium_class_with_shared_ride_and_Extras_for_Round_Trip(String,Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="201476428459">3:21.476</td>
+              <td class="duration" data-value="201476428459">3:21.476</td>
+              <td class="duration" data-value="201476428459">3:21.476</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Booking_Flow_Round_Trip.book_tickets_with_private_ride_and_Extras_for_Round_Trip_and_rownumber(String,Integer)</td>
+              <td>3</td>
+              <td class="duration" data-value="70196672055">1:10.196</td>
+              <td class="duration" data-value="70196672055">1:40.588</td>
+              <td class="duration" data-value="210590016167">3:30.590</td>
+              <td class="failed">66.67%</td>
+            </tr>
+            <tr>
+              <td class="location">Booking_Flow_Round_Trip.book_tickets_with_shared_ride_and_Extras_for_Round_Trip_and_rownumber(String,Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="161584798936">2:41.584</td>
+              <td class="duration" data-value="161584798936">2:41.584</td>
+              <td class="duration" data-value="161584798936">2:41.584</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Booking_Flow_Round_Trip.booking_should_be_successful_for_Single_passenger_Round_Trip_without_any_extras(String,Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="139242300896">2:19.242</td>
+              <td class="duration" data-value="139242300896">2:19.242</td>
+              <td class="duration" data-value="139242300896">2:19.242</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Booking_Flow_Round_Trip.user_should_allow_to_add_Extras_into_round_trip_but_Private_Ride_should_not_be_allow_to_Add_into_Trip()</td>
+              <td>5</td>
+              <td class="duration" data-value="149091756318">2:29.091</td>
+              <td class="duration" data-value="149091756318">3:24.018</td>
+              <td class="duration" data-value="745458781594">12:25.458</td>
+              <td class="failed">40.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Home_Page.i_am_on_the_BL_home_page()</td>
+              <td>53</td>
+              <td class="duration" data-value="120462801">0.120</td>
+              <td class="duration" data-value="120462801">0.210</td>
+              <td class="duration" data-value="6384528478">6.384</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Hooks.initDriver()</td>
+              <td>53</td>
+              <td class="duration" data-value="11511044132">11.511</td>
+              <td class="duration" data-value="11511044132">39.510</td>
+              <td class="duration" data-value="610085339021">10:10.085</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Hooks.teardown()</td>
+              <td>53</td>
+              <td class="duration" data-value="4206699770">4.206</td>
+              <td class="duration" data-value="4206699770">4.303</td>
+              <td class="duration" data-value="222955087832">3:42.955</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Login_Page.I_click_on_Sign_Out_button_then_verify_Sign_Out()</td>
+              <td>1</td>
+              <td class="duration" data-value="8279215622">8.279</td>
+              <td class="duration" data-value="8279215622">8.279</td>
+              <td class="duration" data-value="8279215622">8.279</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Login_Page.for_Packs_User_should_be_able_to_buy_duplicate_Packs()</td>
+              <td>1</td>
+              <td class="duration" data-value="44021660769">44.021</td>
+              <td class="duration" data-value="44021660769">44.021</td>
+              <td class="duration" data-value="44021660769">44.021</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Login_Page.for_Passes_User_should_not_be_able_to_buy_duplicate_passes()</td>
+              <td>1</td>
+              <td class="duration" data-value="15219187336">15.219</td>
+              <td class="duration" data-value="15219187336">15.219</td>
+              <td class="duration" data-value="15219187336">15.219</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Login_Page.i_Verify_Invalid_Credentials_Data_and_rownumber(String,Integer)</td>
+              <td>3</td>
+              <td class="duration" data-value="4085592962">4.085</td>
+              <td class="duration" data-value="4085592962">4.715</td>
+              <td class="duration" data-value="12256778887">12.256</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Login_Page.i_Verify_whether_user_can_login_with_updated_password(String,Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="65276498549">1:5.276</td>
+              <td class="duration" data-value="65276498549">1:5.276</td>
+              <td class="duration" data-value="65276498549">1:5.276</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Login_Page.i_Verify_whether_user_can_update_New_password_same_as_previous_one()</td>
+              <td>1</td>
+              <td class="duration" data-value="33831020993">33.831</td>
+              <td class="duration" data-value="33831020993">33.831</td>
+              <td class="duration" data-value="33831020993">33.831</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Login_Page.i_log_in_with_valid_provider_from_given_sheetname_and_rownumber(String,Integer)</td>
+              <td>40</td>
+              <td class="duration" data-value="15527557629">15.527</td>
+              <td class="duration" data-value="15527557629">18.585</td>
+              <td class="duration" data-value="621102305182">10:21.102</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Manage_Trips.on_changing_name_or_changing_seat_user_shouldn_t_be_able_to_consume_packs()</td>
+              <td>1</td>
+              <td class="duration" data-value="2034">0.000</td>
+              <td class="duration" data-value="2034">0.000</td>
+              <td class="duration" data-value="2034">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Manage_Trips.primary_Passenger_Should_not_be_able_to_Updated_Modify_his_Her_details()</td>
+              <td>1</td>
+              <td class="duration" data-value="1836">0.000</td>
+              <td class="duration" data-value="1836">0.000</td>
+              <td class="duration" data-value="1836">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Manage_Trips.primary_passenger_is_allowed_to_Edit_Add_or_Remove_co_passenger_and_Edit_extras_to_the_trip()</td>
+              <td>1</td>
+              <td class="duration" data-value="642">0.000</td>
+              <td class="duration" data-value="642">0.000</td>
+              <td class="duration" data-value="642">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Manage_Trips.primary_passenger_of_Guest_user_is_allowed_to_make_any_changes_to_the_Co_passenger()</td>
+              <td>1</td>
+              <td class="duration" data-value="149467230319">2:29.467</td>
+              <td class="duration" data-value="149467230319">2:29.467</td>
+              <td class="duration" data-value="149467230319">2:29.467</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Manage_Trips.user_should_be_able_to_Cancel_the_passenger_successfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="982">0.000</td>
+              <td class="duration" data-value="982">0.000</td>
+              <td class="duration" data-value="982">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Manage_Trips.user_should_be_able_to_Cancel_the_passenger_successfully_and_Refund_should_get_reflected_in_BL_wallet_in_Credit_section()</td>
+              <td>1</td>
+              <td class="duration" data-value="813">0.000</td>
+              <td class="duration" data-value="813">0.000</td>
+              <td class="duration" data-value="813">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Manage_Trips.user_should_be_able_to_Modify_his_her_ticket_ride_with_Change_in_trip_date()</td>
+              <td>1</td>
+              <td class="duration" data-value="2889">0.000</td>
+              <td class="duration" data-value="2889">0.000</td>
+              <td class="duration" data-value="2889">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Manage_Trips.user_should_be_able_to_Modify_his_her_ticket_ride_with_Change_in_trip_timing()</td>
+              <td>1</td>
+              <td class="duration" data-value="138979405746">2:18.979</td>
+              <td class="duration" data-value="138979405746">2:18.979</td>
+              <td class="duration" data-value="138979405746">2:18.979</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Manage_Trips.user_should_be_able_to_add_Passenger_succesully()</td>
+              <td>1</td>
+              <td class="duration" data-value="122823360326">2:2.823</td>
+              <td class="duration" data-value="122823360326">2:2.823</td>
+              <td class="duration" data-value="122823360326">2:2.823</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Manage_Trips.user_should_be_able_to_cancel_the_ticket_successfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="13953687888">13.953</td>
+              <td class="duration" data-value="13953687888">13.953</td>
+              <td class="duration" data-value="13953687888">13.953</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Mobility_Ride.First_mile_and_Last_mile_shared_ride_should_be_added(String,Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="42028664484">42.028</td>
+              <td class="duration" data-value="42028664484">42.028</td>
+              <td class="duration" data-value="42028664484">42.028</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Payments_Methods.Guest_user_selects_a_Train_with_valid_Email_id(String,Integer)</td>
+              <td>2</td>
+              <td class="duration" data-value="82704085972">1:22.704</td>
+              <td class="duration" data-value="82704085972">1:25.713</td>
+              <td class="duration" data-value="165408171944">2:45.408</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Payments_Methods.Guest_user_should_be_able_to_book_the_ticket_using_debit_or_credit_card(String,Integer)</td>
+              <td>7</td>
+              <td class="duration" data-value="21900081785">21.900</td>
+              <td class="duration" data-value="21900081785">43.417</td>
+              <td class="duration" data-value="153300572501">2:33.300</td>
+              <td class="failed">57.14%</td>
+            </tr>
+            <tr>
+              <td class="location">Payments_Methods.user_should_be_able_to_view_the_ticket_successfully(String,Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="7741702622">7.741</td>
+              <td class="duration" data-value="7741702622">7.741</td>
+              <td class="duration" data-value="7741702622">7.741</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Purchase_Parking_Pass.user_should_be_able_buy_the_Parking_pass()</td>
+              <td>1</td>
+              <td class="duration" data-value="24586852096">24.586</td>
+              <td class="duration" data-value="24586852096">24.586</td>
+              <td class="duration" data-value="24586852096">24.586</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Purchase_Parking_Pass.user_should_be_able_to_book_a_ticket_ride_with_purchased_parking_pass()</td>
+              <td>1</td>
+              <td class="duration" data-value="83622834960">1:23.622</td>
+              <td class="duration" data-value="83622834960">1:23.622</td>
+              <td class="duration" data-value="83622834960">1:23.622</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Purchase_Parking_Pass.validation_message_to_be_displayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="4341837274">4.341</td>
+              <td class="duration" data-value="4341837274">4.341</td>
+              <td class="duration" data-value="4341837274">4.341</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Purchase_Train_Pass.user_books_a_Train_Ticket_with_existing_Train_Pass_from_Wallet()</td>
+              <td>1</td>
+              <td class="duration" data-value="88520103404">1:28.520</td>
+              <td class="duration" data-value="88520103404">1:28.520</td>
+              <td class="duration" data-value="88520103404">1:28.520</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Purchase_Train_Pass.user_should_be_able_to_View_the_Purchase_history_of_the_Train_Passes()</td>
+              <td>1</td>
+              <td class="duration" data-value="9448351124">9.448</td>
+              <td class="duration" data-value="9448351124">9.448</td>
+              <td class="duration" data-value="9448351124">9.448</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Purchase_Train_Pass.user_should_be_able_to_buy_the_Passes()</td>
+              <td>1</td>
+              <td class="duration" data-value="7815826370">7.815</td>
+              <td class="duration" data-value="7815826370">7.815</td>
+              <td class="duration" data-value="7815826370">7.815</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Purchase_Train_Pass.user_should_get_error_message_while_purchasing_duplicate_passes()</td>
+              <td>1</td>
+              <td class="duration" data-value="6008076572">6.008</td>
+              <td class="duration" data-value="6008076572">6.008</td>
+              <td class="duration" data-value="6008076572">6.008</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Purchase_Travel_Packs.error_should_pop_up_saying_only_login_user_can_buy_pass()</td>
+              <td>1</td>
+              <td class="duration" data-value="11746088533">11.746</td>
+              <td class="duration" data-value="11746088533">11.746</td>
+              <td class="duration" data-value="11746088533">11.746</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Purchase_Travel_Packs.guest_user_buys_pass_and_pack()</td>
+              <td>1</td>
+              <td class="duration" data-value="7849993232">7.849</td>
+              <td class="duration" data-value="7849993232">7.849</td>
+              <td class="duration" data-value="7849993232">7.849</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Purchase_Travel_Packs.in_checkout_page_purchased_Pack_should_be_applied_and_booking_should_be_successful()</td>
+              <td>1</td>
+              <td class="duration" data-value="71397025977">1:11.397</td>
+              <td class="duration" data-value="71397025977">1:11.397</td>
+              <td class="duration" data-value="71397025977">1:11.397</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Purchase_Travel_Packs.user_cancels_the_trip_and_amount_should_get_Refund_and_the_packs_count_should_get_increased()</td>
+              <td>1</td>
+              <td class="duration" data-value="23401849430">23.401</td>
+              <td class="duration" data-value="23401849430">23.401</td>
+              <td class="duration" data-value="23401849430">23.401</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Purchase_Travel_Packs.user_should_be_able_to_View_the_Purchase_history_of_the_Packs()</td>
+              <td>1</td>
+              <td class="duration" data-value="17367782558">17.367</td>
+              <td class="duration" data-value="17367782558">17.367</td>
+              <td class="duration" data-value="17367782558">17.367</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Purchase_Travel_Packs.user_should_be_able_to_buy_the_Packs()</td>
+              <td>3</td>
+              <td class="duration" data-value="32220328478">32.220</td>
+              <td class="duration" data-value="32220328478">33.603</td>
+              <td class="duration" data-value="96660985436">1:36.660</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Purchase_Travel_Packs.user_should_be_able_to_buy_the_Packs_and_Books_a_Trip()</td>
+              <td>1</td>
+              <td class="duration" data-value="110022374284">1:50.022</td>
+              <td class="duration" data-value="110022374284">1:50.022</td>
+              <td class="duration" data-value="110022374284">1:50.022</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Purchase_Travel_Packs.verify_Refund_in_BL_wallet_credit()</td>
+              <td>1</td>
+              <td class="duration" data-value="16041559228">16.041</td>
+              <td class="duration" data-value="16041559228">16.041</td>
+              <td class="duration" data-value="16041559228">16.041</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>64</td>
+            <td>289</td>
+            <td class="duration">23.775</td>
+            <td class="duration">12:25.458</td>
+            <td class="duration">1:54:31.254</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
